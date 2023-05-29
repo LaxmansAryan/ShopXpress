@@ -15,7 +15,7 @@ This Django project is a fully-featured online shop that allows clients to brows
 To run this Django project locally, please follow these steps:
 
 - Clone the repository:
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/LaxmansAryan/ShopXpress.git
 
 - Install the required dependencies:
     pip install -r requirements.txt
