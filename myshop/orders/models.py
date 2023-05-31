@@ -1,6 +1,6 @@
 from django.db import models
-from django.conf import settings
 from shop.models import Product
+from django.conf import settings
 
 class Order(models.Model):
     first_name = models.CharField(max_length=50)
@@ -28,15 +28,13 @@ class Order(models.Model):
 
     def get_stripe_url(self):
         if not self.stripe_id:
-            # no payment associated
+
             return ''
         if '_test_' in settings.STRIPE_SECRET_KEY:
-            # Stripe path for test payments
             path = '/test/'
         else:
-            # Stripe path for real payments
             path = '/'
-        return f'https://dashboard.stripe.com{path}payments/{self.stripe_id}'
+        return f'https://dashboard.stripe.com{path}payments/{self.strip_id}'
 
 
 class OrderItem(models.Model):
